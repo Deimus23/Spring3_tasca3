@@ -1,20 +1,20 @@
-package Menus;
+package Menus.MenusItems;
 
 import java.util.Scanner;
 
-public class ItemMenu {
+public class RoomMenu {
 
-    public static void itemStart() {
+    public static void roomStart() {
         Scanner sc = new Scanner(System.in);
         int choose;
         boolean exit = true;
         do {
             try {
-                System.out.println("***Bienvenido al gestor de items***");
-                System.out.println("1.-Crear item");
-                System.out.println("2.-Eliminar item");
-                System.out.println("3.-Mostrar items");
-                System.out.println("4.-Modificar item");
+                System.out.println("***Bienvenido al gestor de salas***");
+                System.out.println("1.-Crear sala");
+                System.out.println("2.-Eliminar sala");
+                System.out.println("3.-Mostrar salas");
+                System.out.println("4.-Modificar sala");
                 System.out.println("5.-Atras");
                 System.out.print("Elige una opción: ");
 
@@ -22,13 +22,13 @@ public class ItemMenu {
                 sc.nextLine();
 
                 switch (choose) {
-                    case 1: // metodo para crear item;
+                    case 1: // metodo para crear sala;
                         break;
-                    case 2: // metodo para eliminar item;
+                    case 2: // metodo para eliminar sala;
                         break;
-                    case 3: // metodo para mostar todas las items;
+                    case 3: // metodo para mostar todas las salas;
                         break;
-                    case 4: // metodo para modificar item;
+                    case 4: // metodo para modificar sala;
                         break;
                     case 5:
                         exit = false;
@@ -44,6 +44,4 @@ public class ItemMenu {
         } while (exit);
     }
 }
-
-
 

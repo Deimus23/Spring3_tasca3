@@ -2,11 +2,13 @@ package Menus;
 
 import java.util.Scanner;
 
-public class Menu {
+import static Menus.MenusUser.ClientMenu.clientStart;
+import static Menus.MenusItems.EscapeRoomMenu.escapeRoomStart;
+
+public class MainMenu {
 
   public static void Start() {
       Scanner sc = new Scanner(System.in);
-      ClientMenu clientsMenu = new ClientMenu();
       int choose;
       boolean exit = true;
       do {
@@ -23,9 +25,9 @@ public class Menu {
 
               switch (choose) {
 
-                  case 1: EscapeRoomMenu.escapeRoomStart();
+                  case 1: escapeRoomStart();
                       break;
-                  case 2: clientsMenu.ClientStart();
+                  case 2: clientStart();
                       break;
                   case 3:
                       System.out.println("Saliendo de la aplicación...");

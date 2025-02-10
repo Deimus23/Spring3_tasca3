@@ -1,36 +1,36 @@
-package Menus;
+package Menus.MenusUser;
 
 import java.util.Scanner;
 
-public class RoomMenu {
+import static Menus.MenusUser.CertificateMenu.certificateStart;
+import static Menus.MenusUser.TicketMenu.ticketStart;
 
-    public static void roomStart() {
+public class ClientMenu {
+    public static void clientStart() {
         Scanner sc = new Scanner(System.in);
         int choose;
         boolean exit = true;
         do {
             try {
-                System.out.println("***Bienvenido al gestor de salas***");
-                System.out.println("1.-Crear sala");
-                System.out.println("2.-Eliminar sala");
-                System.out.println("3.-Mostrar salas");
-                System.out.println("4.-Modificar sala");
-                System.out.println("5.-Atras");
+                System.out.println(" ");
+                System.out.println("*** Gestor de clientes***");
+                System.out.println("1.-Jugadores en sala");
+                System.out.println("2.-Comprar tiket");
+                System.out.println("3.-Dar certificados");
+                System.out.println("3.-Atras");
                 System.out.print("Elige una opción: ");
 
                 choose = sc.nextInt();
                 sc.nextLine();
 
                 switch (choose) {
-                    case 1: // metodo para crear sala;
+                    case 1:// print jugadores en sala
                         break;
-                    case 2: // metodo para eliminar sala;
+                    case 2:ticketStart();
                         break;
-                    case 3: // metodo para mostar todas las salas;
+                    case 3:certificateStart();
                         break;
-                    case 4: // metodo para modificar sala;
-                        break;
-                    case 5:
+                    case 4:
                         exit = false;
                         break;
                     default:
@@ -44,4 +44,3 @@ public class RoomMenu {
         } while (exit);
     }
 }
-
