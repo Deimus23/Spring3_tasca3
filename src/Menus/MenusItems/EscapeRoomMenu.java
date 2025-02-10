@@ -1,6 +1,10 @@
-package Menus;
+package Menus.MenusItems;
 
 import java.util.Scanner;
+
+import static Menus.MenusItems.TrackMenu.hintStart;
+import static Menus.MenusItems.ItemMenu.itemStart;
+import static Menus.MenusItems.RoomMenu.roomStart;
 
 public class EscapeRoomMenu {
 
@@ -16,7 +20,7 @@ public class EscapeRoomMenu {
                 System.out.println("***Bienvenido al gestor de salas***");
                 System.out.println("1.-Gestión de salas");
                 System.out.println("2.-Gestión de ítems");
-                System.out.println("-3.Gestión de pistas");
+                System.out.println("3.Gestión de pistas");
                 System.out.println("4.-Salir de la aplicación");
 
                 System.out.print("Elige una opción: ");
@@ -26,18 +30,16 @@ public class EscapeRoomMenu {
 
                 switch (choose) {
 
-                    case 1: // metodo para llamar el menu de salas;
-                        break;
-                    case 2: // metodo para llamar al menu de items;
-                        break;
-                    case 3: // metodo para llamar al menu de pistas;
-                        break;
-                    case 4:
-                        exit = false;
-                        break;
-                    default:
-                        System.out.println("Valor incorrecto");
-                        break;
+                    case 1: roomStart();
+                    break;
+                    case 2: itemStart();
+                    break;
+                    case 3: hintStart();
+                    break;
+                    case 4: exit = false;
+                    break;
+                    default:System.out.println("Valor incorrecto");
+                    break;
                 }
             } catch (Exception e) {
                 System.out.println("Error: Debes ingresar un número entero.");
